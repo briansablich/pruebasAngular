@@ -11,4 +11,11 @@ import { HeaderComponent } from './components/header/header.component';
 export class AppComponent {
   title = 'my-project';
   nombre: string = 'Flauta';
+
+  numero: number = 0;
+
+  addOne(){
+    this.numero++;
+  }
+
 }
