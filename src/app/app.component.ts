@@ -17,6 +17,25 @@ export class AppComponent {
   numero: number = 0;
   numerosArray: string[] = ['uno', 'dos', 'tres', 'cuatro', 'cinco'];
 
+  animals: any = [
+      {
+        "id": 1,
+        "name": "Perro",
+        "type": "Mamífero"
+      },
+      {
+        "id": 2,
+        "name": "Gato",
+        "type": "Mamífero"
+      },
+      {
+        "id": 3,
+        "name": "Loro",
+        "type": "Ave"
+      }
+    ]
+    
+
   //funciones para probar cosas
   addOne(){
     this.numero++;

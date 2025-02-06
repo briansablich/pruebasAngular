@@ -340,6 +340,10 @@
     }
   }
 
+  @for (animal of animals; track animal.id) {
+    <p>{{ animal.id }} - {{ animal.name }} es un {{ animal.type }}</p>
+  }
+
 </div>
 
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
