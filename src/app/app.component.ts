@@ -19,6 +19,12 @@ export class AppComponent {
   numerosArray: string[] = ['uno', 'dos', 'tres', 'cuatro', 'cinco'];
   text: string = 'Soy la pantera flauta';
 
+  gato: any = {
+    "id": 1,
+    "name": "Tobias",
+    "age": 3
+  }
+
   animals: any = [
       {
         "id": 1,

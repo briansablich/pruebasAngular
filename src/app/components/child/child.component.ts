@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, input, Input } from '@angular/core';
 
 @Component({
   selector: 'app-child',
@@ -7,13 +7,13 @@ import { Component, Input } from '@angular/core';
   styleUrl: './child.component.css'
 })
 export class ChildComponent {
-  @Input()
-  mensaje: String = "";
+  //@Input()
+  //mensaje: string = "";
 
-  gato: any = {
-    "id": 1,
-    "name": "Tobias",
-    "age": 3
-  }
+  mensaje = input<string>('');
+
+  //@Input()
+  //gato: any;
+  gato = input<any>();
 
 }
