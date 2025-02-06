@@ -2,10 +2,11 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './components/header/header.component';
 import { FormsModule } from '@angular/forms';
+import { ChildComponent } from "./components/child/child.component";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, HeaderComponent, FormsModule],
+  imports: [RouterOutlet, HeaderComponent, FormsModule, ChildComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -16,6 +17,7 @@ export class AppComponent {
   condicion: boolean = false;
   numero: number = 0;
   numerosArray: string[] = ['uno', 'dos', 'tres', 'cuatro', 'cinco'];
+  text: string = 'Soy la pantera flauta';
 
   animals: any = [
       {
