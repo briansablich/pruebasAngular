@@ -327,7 +327,7 @@
 
   <app-header></app-header>
   <app-header></app-header>
-  <p (click)="addOne()">Numero: {{ numero }}</p>
+  <p class="fs-5 fw-bold p-2" (click)="addOne()">Numero: {{ numero }}</p>
   <h1>Nombre: {{ nombre }}</h1>
   <input type="text" [(ngModel)]="nombre" />
   @if (condicion) {
@@ -340,9 +340,19 @@
     }
   }
 
-  @for (animal of animals; track animal.id) {
-    <p>{{ animal.id }} - {{ animal.name }} es un {{ animal.type }}</p>
-  }
+  <ul>
+    @for (animal of animals; track animal.id) {
+      <li>
+        <h2>
+          {{ animal.id }}
+        </h2>
+        <h3>
+          {{ animal.name }} es un {{ animal.type }}
+        </h3>
+        <img class="img-thumbnail w-25" src="{{ animal.image }}" />
+      </li>
+    }
+  </ul>
 
 </div>
 

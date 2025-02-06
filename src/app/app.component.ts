@@ -21,17 +21,20 @@ export class AppComponent {
       {
         "id": 1,
         "name": "Perro",
-        "type": "Mamífero"
+        "type": "Mamífero",
+        "image" : "https://img.freepik.com/vector-gratis/perro-lindo-alegre-sobre-fondo-blanco_1308-132745.jpg?semt=ais_hybrid"
       },
       {
         "id": 2,
         "name": "Gato",
-        "type": "Mamífero"
+        "type": "Mamífero",
+        "image" : "https://static.nationalgeographicla.com/files/styles/image_3200/public/nationalgeographic_1468962.jpg?w=1600&h=1179"
       },
       {
         "id": 3,
         "name": "Loro",
-        "type": "Ave"
+        "type": "Ave",
+        "image" : "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Scarlet_Macaw_and_Blue-and-gold_Macaw.jpg/320px-Scarlet_Macaw_and_Blue-and-gold_Macaw.jpg"
       }
     ]
     
