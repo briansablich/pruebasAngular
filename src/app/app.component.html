@@ -333,6 +333,13 @@
   @if (condicion) {
     <p>Esto es verdadero</p>
   }
+  @for (num of numerosArray; track num) {
+    @if ( num != 'dos'){
+
+      <p>{{$index}} es {{ num }}</p>
+    }
+  }
+
 </div>
 
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->

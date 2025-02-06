@@ -10,11 +10,14 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
+  //Variables para probar cosas
   title = 'my-project';
   nombre: string = 'Flauta';
   condicion: boolean = false;
   numero: number = 0;
+  numerosArray: string[] = ['uno', 'dos', 'tres', 'cuatro', 'cinco'];
 
+  //funciones para probar cosas
   addOne(){
     this.numero++;
   }
