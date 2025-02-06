@@ -12,7 +12,7 @@ import { FormsModule } from '@angular/forms';
 export class AppComponent {
   title = 'my-project';
   nombre: string = 'Flauta';
-
+  condicion: boolean = false;
   numero: number = 0;
 
   addOne(){

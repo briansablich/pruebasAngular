@@ -330,6 +330,9 @@
   <p (click)="addOne()">Numero: {{ numero }}</p>
   <h1>Nombre: {{ nombre }}</h1>
   <input type="text" [(ngModel)]="nombre" />
+  @if (condicion) {
+    <p>Esto es verdadero</p>
+  }
 </div>
 
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
