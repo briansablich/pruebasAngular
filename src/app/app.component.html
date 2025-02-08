@@ -222,8 +222,9 @@
 
      <!--Entre parentesis va el evento del child, luego ejecuta la funcion creada en el padre. $event es para eventos personalizados
      Y en la linea abajo solo muestra la info como cambia-->
-    <app-child (login)="recivedUserName($event)"></app-child>
-    <h2 [ngClass]="{dark: true, 'text-center': true}">jorgelin</h2>
+    
+    <h2 [ngClass]="{dark: isAplicable, 'text-center': isAplicable}">jorgelin</h2>
+    <button class="btn btn-danger" (click)="aplicable()">Aplicable or Not</button>
   </div>
 </main>
 
