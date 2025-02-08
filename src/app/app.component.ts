@@ -18,6 +18,7 @@ export class AppComponent {
   numero: number = 0;
   numerosArray: string[] = ['uno', 'dos', 'tres', 'cuatro', 'cinco'];
   text: string = 'Soy la pantera flauta';
+  userNamePadre: string = 'Flautita';
 
   gato: any = {
     "id": 1,
@@ -48,8 +49,14 @@ export class AppComponent {
     
 
   //funciones para probar cosas
+  //añadir un numero
   addOne(){
     this.numero++;
+  }
+
+  //recibir el Output() de child
+  recivedUserName(e: any){
+    this.userNamePadre = e;
   }
 
 }
