@@ -3,6 +3,7 @@ import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './components/header/header.component';
 import { FormsModule } from '@angular/forms';
 import { ChildComponent } from "./components/child/child.component";
+import Product from './models/Product';
 
 @Component({
   selector: 'app-root',
@@ -19,6 +20,7 @@ export class AppComponent {
   numerosArray: string[] = ['uno', 'dos', 'tres', 'cuatro', 'cinco'];
   text: string = 'Soy la pantera flauta';
   userNamePadre: string = 'Flautita';
+  product: Product;
 
   gato: any = {
     "id": 1,
@@ -63,6 +65,11 @@ export class AppComponent {
   //se ejecuta cuando el componente se cree
   constructor(){
     this.userNamePadre = 'Esteban';
+    this.product = {
+      name: "Computer",
+      price: 500,
+      isForSale: true
+    }
   }
 
 }
