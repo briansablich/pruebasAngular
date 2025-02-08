@@ -60,4 +60,9 @@ export class AppComponent {
     this.userNamePadre = e;
   }
 
+  //se ejecuta cuando el componente se cree
+  constructor(){
+    this.userNamePadre = 'Esteban';
+  }
+
 }

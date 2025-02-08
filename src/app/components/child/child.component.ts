@@ -25,7 +25,7 @@ export class ChildComponent {
 
   userName: string = 'Pantera';
   
-  //sustituto del decorador output
+  //sustituto del decorador output (mas moderno y mejor)
   //output API
   login = output<any>();
 
