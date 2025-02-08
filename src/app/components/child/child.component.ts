@@ -1,4 +1,4 @@
-import { Component, EventEmitter, input, Input, Output } from '@angular/core';
+import { Component, EventEmitter, input, Input, output, Output } from '@angular/core';
 
 @Component({
   selector: 'app-child',
@@ -20,12 +20,19 @@ export class ChildComponent {
   gato = input<any>();
 
   //dedcorador output sirve para enviar datos al componente padre
-  @Output()
-  login: EventEmitter<any> = new EventEmitter<any>;
+  //@Output()
+  //login: EventEmitter<any> = new EventEmitter<any>;
 
   userName: string = 'Pantera';
+  
+  //sustituto del decorador output
+  //output API
+  login = output<any>();
 
+  //funcion que emite el output
   handleLogin(){
     this.login.emit(this.userName);
   }
+
+
 }

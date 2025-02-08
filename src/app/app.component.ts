@@ -48,13 +48,14 @@ export class AppComponent {
     ]
     
 
-  //funciones para probar cosas
+  //---------------funciones para probar cosas-----------------------------
   //añadir un numero
   addOne(){
     this.numero++;
   }
 
-  //recibir el Output() de child
+  //recibir el Output() de child.
+  //recive el evento 'e' que trae un 'any'
   recivedUserName(e: any){
     this.userNamePadre = e;
   }
