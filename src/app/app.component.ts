@@ -4,10 +4,11 @@ import { HeaderComponent } from './components/header/header.component';
 import { FormsModule } from '@angular/forms';
 import { ChildComponent } from "./components/child/child.component";
 import Product from './models/Product';
+import { NgClass } from '@angular/common';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, HeaderComponent, FormsModule, ChildComponent],
+  imports: [RouterOutlet, HeaderComponent, FormsModule, ChildComponent, NgClass],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

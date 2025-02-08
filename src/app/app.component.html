@@ -172,6 +172,12 @@
       background: var(--red-to-pink-to-purple-horizontal-gradient);
       margin-block: 1.5rem;
     }
+
+  }
+  .dark {
+    background-color: red;
+    color: blue;
+    font-size: x-small;
   }
 </style>
 
@@ -217,7 +223,7 @@
      <!--Entre parentesis va el evento del child, luego ejecuta la funcion creada en el padre. $event es para eventos personalizados
      Y en la linea abajo solo muestra la info como cambia-->
     <app-child (login)="recivedUserName($event)"></app-child>
-    <p>{{ userNamePadre }}</p>
+    <h2 [ngClass]="{dark: true, 'text-center': true}">jorgelin</h2>
   </div>
 </main>
 
