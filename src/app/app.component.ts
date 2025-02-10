@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './components/header/header.component';
-import { FormsModule } from '@angular/forms';
+import { FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ChildComponent } from "./components/child/child.component";
 import Product from './models/Product';
 import { NgClass } from '@angular/common';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, HeaderComponent, FormsModule, ChildComponent, NgClass],
+  imports: [RouterOutlet, HeaderComponent, FormsModule, ChildComponent, NgClass, ReactiveFormsModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -23,6 +23,12 @@ export class AppComponent {
   userNamePadre: string = 'Flautita';
   product: Product;
   isAplicable: boolean;
+
+  //variable de formulario
+  catForm: FormGroup;
+  name: FormControl;
+  age: FormControl;
+  color: FormControl;
   
   gato: any = {
     "id": 1,
@@ -77,6 +83,20 @@ export class AppComponent {
       price: 500,
       isForSale: true
     }
+
+    this.name = new FormControl('');
+    this.age = new FormControl('');
+    this.color = new FormControl('');
+
+    this.catForm = new FormGroup({
+      name: this.name,
+      age: this.age,
+      color: this.color
+    })
+  }
+
+  handleSubmit(): void{
+    console.log(this.catForm.value);
   }
   
 
