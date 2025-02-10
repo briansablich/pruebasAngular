@@ -85,7 +85,8 @@ export class AppComponent {
     }
 
     this.name = new FormControl('', Validators.required);
-    this.age = new FormControl('', [Validators.required, Validators.max(6), Validators.min(0)]);
+    this.age = new FormControl('', [Validators.required, Validators.max(6),
+                                Validators.min(0)]);
     this.color = new FormControl('');
 
     this.catForm = new FormGroup({

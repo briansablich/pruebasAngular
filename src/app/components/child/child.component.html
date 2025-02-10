@@ -2,5 +2,8 @@
 <p>{{ mensaje() }} - {{gato().id}} {{gato().name}} Edad: {{gato().age}}</p>
 
 <!--Entre parentesis se ponen los eventos-->
-<button class="btn btn-primary" (click)="handleLogin()">Login</button>
-<p>Nombre de usuario: </p>
+<!--<button class="btn btn-primary" (click)="handleLogin()">Login</button>
+<p>Nombre de usuario: </p>!-->
+<h3>{{ productService.product.name }} </h3>
+<h4>{{ productService.product.price }}</h4>
+<button (click)="productService.setProductName('Monitor')">Cambiar nombre</button>

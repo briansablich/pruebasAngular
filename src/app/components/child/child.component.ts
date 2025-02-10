@@ -1,4 +1,5 @@
 import { Component, EventEmitter, input, Input, output, Output } from '@angular/core';
+import { ProductService } from '../../services/product.service';
 
 @Component({
   selector: 'app-child',
@@ -24,15 +25,18 @@ export class ChildComponent {
   //login: EventEmitter<any> = new EventEmitter<any>;
 
   userName: string = 'Pantera';
-  
+
   //sustituto del decorador output (mas moderno y mejor)
   //output API
   login = output<any>();
 
   //funcion que emite el output
-  handleLogin(){
+  handleLogin() {
     this.login.emit(this.userName);
   }
 
+  constructor(public productService: ProductService){
+    
+  }
 
 }
