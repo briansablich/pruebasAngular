@@ -230,16 +230,24 @@
       <fieldset>
         <label>Cat Name</label>
         <input type="text" id="cat-name" formControlName="name">
+        @if (name.invalid && name.touched) {
+          <p class="text-danger">Name is required</p>
+        }
       </fieldset>
       <fieldset>
         <label>Cat Age</label>
         <input type="number" id="cat-age" formControlName="age">
+        @if (age.hasError("required") && age.touched) {
+          <p class="text-danger">Age is required</p>
+        } @else if ((age.hasError("max") || age.hasError("min")) && age.touched) {
+          <p class="text-danger">Age is inappropiate</p>
+        }
       </fieldset>
       <fieldset>
         <label>Cat Color</label>
         <input type="text" id="cat-color" formControlName="color">
       </fieldset>
-      <button>Create Cat</button>
+      <button [disabled]="catForm.invalid">Create Cat</button>
     </form>
   </div>
 </main>

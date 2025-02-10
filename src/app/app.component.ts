@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './components/header/header.component';
-import { FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { ChildComponent } from "./components/child/child.component";
 import Product from './models/Product';
 import { NgClass } from '@angular/common';
@@ -84,8 +84,8 @@ export class AppComponent {
       isForSale: true
     }
 
-    this.name = new FormControl('');
-    this.age = new FormControl('');
+    this.name = new FormControl('', Validators.required);
+    this.age = new FormControl('', [Validators.required, Validators.max(6), Validators.min(0)]);
     this.color = new FormControl('');
 
     this.catForm = new FormGroup({
