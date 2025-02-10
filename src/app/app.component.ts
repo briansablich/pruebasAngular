@@ -97,6 +97,7 @@ export class AppComponent {
 
   handleSubmit(): void{
     console.log(this.catForm.value);
+    this.catForm.reset();
   }
   
 
