@@ -181,9 +181,10 @@
 </style>
 
 <main class="main">
-
+  <app-header></app-header>
+<!--
   <div>
-    <!-- comentado todo
+     comentado todo
     Pruebas primeras cosas
     <app-header></app-header>
     <app-header></app-header>
@@ -215,12 +216,12 @@
     </ul>
   
   </div>
-    -->
+-->
     <!--Prueba componentes hijos-->
-    <app-child [mensaje]="text" [gato]="gato"></app-child>
+    <!-- <app-child [mensaje]="text" [gato]="gato"></app-child>
 
-     <!--Entre parentesis va el evento del child, luego ejecuta la funcion creada en el padre. $event es para eventos personalizados
-     Y en la linea abajo solo muestra la info como cambia-->
+     Entre parentesis va el evento del child, luego ejecuta la funcion creada en el padre. $event es para eventos personalizados
+     Y en la linea abajo solo muestra la info como cambia
     
     <h2 [ngClass]="{dark: isAplicable, 'text-center': isAplicable}">jorgelin</h2>
     <button class="btn btn-danger" (click)="aplicable()">Aplicable or Not</button>
@@ -248,7 +249,7 @@
       </fieldset>
       <button [disabled]="catForm.invalid">Create Cat</button>
     </form>
-  </div>
+  </div> -->
 </main>
 
 
@@ -264,4 +265,4 @@
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
 
-<router-outlet><router-outlet/>
+<router-outlet></router-outlet>

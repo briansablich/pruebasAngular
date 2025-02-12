@@ -1,1 +1,26 @@
-<p>create works!</p>
+<form [formGroup]="catForm" (submit)="handleSubmit()">
+    <fieldset>
+      <label>Cat Name</label>
+      <input class="form-control w-25" type="text" id="cat-name" formControlName="name">
+      @if (name.invalid && name.touched) {
+        <p class="text-danger">Name is required</p>
+      }
+    </fieldset>
+    <fieldset>
+      <label>Cat Age</label>
+      <input class="form-control" style="width: 100px;" type="number" id="cat-age" formControlName="age">
+      @if (age.hasError("required") && age.touched) {
+        <p class="text-danger">Age is required</p>
+      } @else if ((age.hasError("max") || age.hasError("min")) && age.touched) {
+        <p class="text-danger">Age is inappropiate</p>
+      }
+    </fieldset>
+    <fieldset>
+      <label>Cat Color</label>
+      <input class="form-control w-25" type="text" id="cat-color" formControlName="color">
+      @if (color.hasError("required") && color.touched) {
+        <p class="text-danger">Color is important</p>
+      }
+    </fieldset>
+    <button [disabled]="catForm.invalid">Create Cat</button>
+  </form>

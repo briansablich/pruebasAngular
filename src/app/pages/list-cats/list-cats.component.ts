@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CreatecatService } from '../../services/createcat.service';
 
 @Component({
   selector: 'app-list-cats',
@@ -7,5 +8,6 @@ import { Component } from '@angular/core';
   styleUrl: './list-cats.component.css'
 })
 export class ListCatsComponent {
+  constructor(public createcatService: CreatecatService){}
 
 }
