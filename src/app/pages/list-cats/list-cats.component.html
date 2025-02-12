@@ -1,15 +1,17 @@
 @for (cat of createcatService.listCat; track $index) {
-<div class="card text-bg-primary mb-3 ms-3" style="max-width: 30rem;">
-    <div class="card-header">
-        <div class="card-body">
-            <h2>Nombre: {{ cat.name }}</h2>
+<div class="card text-bg-secondary mb-3 ms-3" style="max-width: 30rem;">
+    <a class="text-bg-warning" [routerLink]="cat.name">
+        <div class="card-header">
+            <div class="card-body">
+                <h2>Nombre: {{ cat.name }}</h2>
+            </div>
+            <div class="card-text">
+                <h4>Edad: {{ cat.age }}</h4>
+            </div>
+            <div class="card-text">
+                <h4>Color: {{ cat.color }}</h4>
+            </div>
         </div>
-        <div class="card-text">
-            <h4>Edad: {{ cat.age }}</h4>
-        </div>
-        <div class="card-text">
-            <h4>Color: {{ cat.color }}</h4>
-        </div>
-    </div>
+    </a>
 </div>
 }

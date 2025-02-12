@@ -10,19 +10,19 @@ export class CreatecatService {
   constructor() {
     this.listCat = [
       {
-        name: "Flauta",
+        name: "flauta",
         age: 5,
-        color: "Negro rayado"
+        color: "negro rayado"
       },
       {
-        name: "Calabaza",
+        name: "calabaza",
         age: 1,
-        color: "Naranja y blanco"
+        color: "naranja y blanco"
       },
       {
-        name: "Fermin",
+        name: "fermin",
         age: 4,
-        color: "Marrón gastadito"
+        color: "marron gastadito"
       }
     ]
   }
@@ -30,4 +30,9 @@ export class CreatecatService {
   addCat(cat: Cat): void{
     this.listCat.push(cat);
   }
+
+  getCat(catName: string): Cat | undefined{
+    return this.listCat.find((cat) => cat.name === catName);
+  }
+
 }
