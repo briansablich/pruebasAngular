@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { CreatecatService } from '../../services/createcat.service';
 import Cat from '../../models/cat/Cat';
@@ -9,10 +9,15 @@ import Cat from '../../models/cat/Cat';
   templateUrl: './cat-details.component.html',
   styleUrl: './cat-details.component.css'
 })
-export class CatDetailsComponent {
+export class CatDetailsComponent implements OnInit{
   selectedCat?: Cat | undefined;
   constructor(private route: ActivatedRoute, private catService: CreatecatService){
-    const catName = route.snapshot.params['catName'];
-    this.selectedCat = catService.getCat(catName);
+    
   }
+
+  ngOnInit(): void {
+    const catName = this.route.snapshot.params['catName'];
+    this.selectedCat = this.catService.getCat(catName);
+  }
+
 }
