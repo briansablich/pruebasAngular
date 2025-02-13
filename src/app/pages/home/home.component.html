@@ -1,1 +1,8 @@
-<p>home works!</p>
+<ul>
+    @for (u of userService.users; track $index) {
+    <li>
+        <h2>{{ $index + 1 }}</h2>
+        <h4>{{ u.dni }}</h4>
+    </li>
+    }
+</ul>
